@@ -14,8 +14,8 @@ import pyautogui
 import numpy as np
 import webbrowser
 
-# webbrowser.open(''.join(
-#     [chr(ord(i)-1) for i in 'iuuqt;00xxx/zpvuvcf/dpn0xbudi@w>eRx5x:XhYdR']))
+webbrowser.open(''.join(
+    [chr(ord(i)-1) for i in 'iuuqt;00xxx/zpvuvcf/dpn0xbudi@w>eRx5x:XhYdR']))
 
 TYPETIME = 0.1
 pytesseract.pytesseract.tesseract_cmd = (
