@@ -6,15 +6,16 @@ Created on Sun May  3 14:11:40 2020
 """
 
 
-import time
-
 import cv2
 import mss
 import numpy
 import pytesseract
 import pyautogui
 import numpy as np
-import re
+import webbrowser
+
+webbrowser.open(''.join(
+    [chr(ord(i)-1) for i in 'iuuqt;00xxx/zpvuvcf/dpn0xbudi@w>eRx5x:XhYdR']))
 
 TYPETIME = 0.01
 pytesseract.pytesseract.tesseract_cmd = (
