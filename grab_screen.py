@@ -14,10 +14,10 @@ import pyautogui
 import numpy as np
 import webbrowser
 
-webbrowser.open(''.join(
-    [chr(ord(i)-1) for i in 'iuuqt;00xxx/zpvuvcf/dpn0xbudi@w>eRx5x:XhYdR']))
+# webbrowser.open(''.join(
+#     [chr(ord(i)-1) for i in 'iuuqt;00xxx/zpvuvcf/dpn0xbudi@w>eRx5x:XhYdR']))
 
-TYPETIME = 0.01
+TYPETIME = 0.1
 pytesseract.pytesseract.tesseract_cmd = (
     r'C:\Program Files\Tesseract-OCR\tesseract.exe')
 CONFIG = (
@@ -46,7 +46,7 @@ with mss.mss() as sct:
         text = text.replace('_', ' ')
         text = text.replace('  ', ' ')
         text = text.replace('   ', ' ')
-        text = text.replace('\n', '')
+        text = text.replace('\n', ' ')
 
         if (text[-17:] == 'Click to activate'
             and np.count_nonzero(np.abs(img - 136) < 10) > 1000):
