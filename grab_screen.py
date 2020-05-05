@@ -14,10 +14,7 @@ import pyautogui
 import numpy as np
 import webbrowser
 
-webbrowser.open(''.join(
-    [chr(ord(i)-1) for i in 'iuuqt;00xxx/zpvuvcf/dpn0xbudi@w>eRx5x:XhYdR']))
-
-TYPETIME = 0.1
+TYPETIME = 0.001
 pytesseract.pytesseract.tesseract_cmd = (
     r'C:\Program Files\Tesseract-OCR\tesseract.exe')
 CONFIG = (
