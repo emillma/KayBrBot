@@ -35,11 +35,11 @@ with mss.mss() as sct:
         img = numpy.array(sct.grab(monitor))
         img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         cv2.imshow("OpenCV/Numpy normal", img)
-        if np.abs(img[45,25] - 232) > 20:
-            continue
         if cv2.waitKey(100) & 0xFF == ord("q"):
             cv2.destroyAllWindows()
             break
+        if np.abs(img[45,25] - 232) > 20:
+            continue
 
         text = pytesseract.image_to_string(img, config = CONFIG)
         text = text.replace('_', ' ')
